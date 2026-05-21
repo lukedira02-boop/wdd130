@@ -1,0 +1,10 @@
+.socialmedia {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.socialmedia img {
+    width: 80px;
+}
