@@ -9,6 +9,11 @@
     --heading-font: Georgia, serif;
     --body-font: Arial, sans-serif;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 /* Universal Reset */
 * {
@@ -66,6 +71,7 @@ nav a {
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     padding: 1rem;
+    /* float: right; */
 }
 
 .hero article {
@@ -75,13 +81,9 @@ nav a {
     right: 20px;
     background-color: rgba(255, 255, 255, 0.85);
     padding: 1rem;
+    float: right;
 }
 
-.hero article img {
-    float: right;
-    width: 150px;
-    margin-left: 1rem;
-}
 
 /* Sections */
 section {
@@ -114,7 +116,7 @@ section h2 {
 }
 
 /* Footer */
-footer {
+footer a {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
