@@ -1,4 +1,4 @@
-```css
+
 :root {
     --primary-color: #1565C0;
     --secondary-color: #00695C;
@@ -8,14 +8,12 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
 body {
     font-family: var(--body-font);
     color: #222;
@@ -23,7 +21,6 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER */
 header {
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -36,7 +33,6 @@ header img {
     width: 120px;
 }
 
-/* NAVIGATION */
 nav {
     display: flex;
     justify-content: space-evenly;
@@ -55,13 +51,11 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* MAIN */
 main {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* HERO SECTION */
 .hero {
     position: relative;
 }
@@ -97,7 +91,6 @@ main {
     margin-left: 1rem;
 }
 
-/* HISTORY */
 .history {
     padding: 2rem;
 }
@@ -119,7 +112,6 @@ main {
     width: 100%;
 }
 
-/* ADVENTURE GALLERY */
 .adventure {
     padding: 2rem;
 }
@@ -152,7 +144,6 @@ figcaption {
     font-size: 0.9rem;
 }
 
-/* CONTACT PAGE */
 .contact-info,
 .employees,
 .contact-form {
@@ -179,7 +170,6 @@ figcaption {
     border: none;
 }
 
-/* EMPLOYEE GALLERY */
 .employee-gallery {
     display: flex;
     gap: 1rem;
@@ -197,7 +187,6 @@ figcaption {
     border-radius: 8px;
 }
 
-/* CONTACT FORM */
 .contact-form form {
     display: grid;
     gap: 1rem;
@@ -230,14 +219,12 @@ button:hover {
     background-color: var(--secondary-color);
 }
 
-/* CHECKBOX */
 .checkbox {
     display: flex;
     gap: 0.5rem;
     align-items: center;
 }
 
-/* FOOTER */
 footer {
     background-color: var(--primary-color);
     color: #ffffff;
@@ -256,4 +243,4 @@ footer {
 .socialmedia img {
     width: 35px;
 }
-```
+
