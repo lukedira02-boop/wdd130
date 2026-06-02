@@ -1,9 +1,10 @@
+```css
 :root {
     --primary-color: #1E88E5;
     --secondary-color: #00897B;
     --accent1-color: #FB8C00;
     --accent2-color: #E9C46A;
-    --heading-font: "Times New Roman", "Georgia", serif;
+    --heading-font: Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
 
@@ -14,153 +15,240 @@
     box-sizing: border-box;
 }
 
-/* BODY */
 body {
     font-family: var(--body-font);
     color: #222;
-    line-height: 1.5;
+    background-color: #ffffff;
+    line-height: 1.6;
 }
 
-/* PAGE CONTAINER */
-header,
-main,
-footer {
-    width: 840px;
-    margin: 0 auto;
-}
-
-/* HEADINGS */
-h1,
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
-/* =========================
-   NAV + TEXT SPACING
-========================= */
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
-
-/* =========================
-   HEADER (GRID - REQUIRED FIX)
-========================= */
+/* HEADER */
 header {
     display: grid;
     grid-template-columns: 150px 1fr;
     align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
 }
 
 header img {
     width: 120px;
 }
 
-/* =========================
-   NAV (FLEX - REQUIRED FIX)
-========================= */
 nav {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
 }
 
 nav a {
+    color: white;
     text-decoration: none;
     font-weight: bold;
-    color: var(--secondary-color);
+    padding: .5rem 1rem;
 }
 
 nav a:hover {
-    color: var(--accent1-color);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
 }
 
-/* =========================
-   HERO SECTION (IMPROVED)
-========================= */
+/* MAIN */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HERO SECTION */
 .hero {
     position: relative;
 }
 
 .hero img {
-    width: 100%;
     display: block;
+    width: 100%;
 }
 
 .hero h1 {
     position: absolute;
     top: 20px;
-    left: 20px;
-    padding: 16px;
+    width: 100%;
+    padding: 1rem;
     text-align: center;
-    opacity: 0.85;
-    background-color: var(--accent1-color);
-    color: #fff;
+    background-color: rgba(0,0,0,.6);
+    color: white;
+    font-family: var(--heading-font);
 }
 
 .hero article {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     left: 30px;
-    background: rgba(255, 255, 255, 0.85);
-    padding: 10px;
-    max-width: 300px;
+    right: 30px;
+    background-color: rgba(255,255,255,.9);
+    padding: 1rem;
 }
 
 .hero article img {
     float: right;
-    width: 125px;
+    width: 150px;
+    margin-left: 1rem;
 }
 
-/* =========================
-   ADVENTURE SECTION (REQUIRED)
-========================= */
-.adventures {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+/* HISTORY */
+.history {
+    padding: 2rem;
 }
 
-.adventures figure {
-    width: 18%;
+.history h2 {
     text-align: center;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
 }
 
-.adventures img {
-    width: 100%;
-    border-radius: 5px;
-}
-
-/* =========================
-   FOOTER (FIXED LAYOUT)
-========================= */
-footer {
-    background-color: var(--secondary-color);
-    color: #fff;
-    padding: 16px;
-    display: flex;
-    justify-content: space-between;
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    gap: 1rem;
     align-items: center;
 }
 
-footer p {
-    color: var(--accent2-color);
+.history-content img {
+    width: 100%;
+}
+
+/* ADVENTURE GALLERY */
+.adventure {
+    padding: 2rem;
+}
+
+.adventure h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.gallery figure {
+    flex: 1 1 180px;
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+figcaption {
+    margin-top: .5rem;
+    font-size: .9rem;
+}
+
+/* CONTACT PAGE */
+.contact-info,
+.employees,
+.contact-form {
+    padding: 2rem;
+}
+
+.contact-info h1,
+.employees h2,
+.contact-form h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    margin-bottom: .5rem;
+}
+
+.contact-info iframe {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 1rem auto;
+}
+
+/* EMPLOYEES */
+.employee-gallery {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.employee-gallery figure {
+    width: 250px;
+    text-align: center;
+}
+
+.employee-gallery img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* FORM */
+.contact-form form {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input,
+textarea,
+button {
+    font-family: inherit;
+    padding: .75rem;
+}
+
+fieldset {
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+.checkbox {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
 }
 
 .socialmedia {
     display: flex;
-    gap: 10px;
-}
-
-.socialmedia a {
-    text-decoration: none;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: .5rem;
 }
 
 .socialmedia img {
-    width: 30px;
-    height: 30px;
+    width: 35px;
 }
+```
