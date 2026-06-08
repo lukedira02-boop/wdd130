@@ -322,7 +322,7 @@ footer p {
     cursor: pointer;
 }
 
-/ .submit-btn {
+.submit-btn {
     display: block;
     width: 100%;
     padding: 12px;
