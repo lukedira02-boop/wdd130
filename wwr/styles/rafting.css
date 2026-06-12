@@ -94,23 +94,29 @@ nav a:hover {
 }
 
 /* ---------- HERO ---------- */
-
 .hero {
-    text-align: center;
+    position: relative;
 }
 
-.hero img {
-    border-radius: 8px;
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    color: var(--light-text);
 }
 
 .hero article {
-    max-width: 700px;
-    margin: 20px auto 0;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
 }
 
+.hero article img {
+    float: right;
+    width: 150px;
+    margin-left: 15px;
+}
 /* ---------- HOME PAGE ---------- */
 
 .cta {
@@ -257,13 +263,11 @@ fieldset {
     margin-bottom: 20px;
 }
 
-/* Container for the cards */
 .trips-container {
     display: flex;
     grid-template-columns: 1fr, 1fr, 1fr;
     gap: 20px;
 }
-
 /* Each card styling */
 .trip-card {
     width: 300px;
