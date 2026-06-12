@@ -12,7 +12,6 @@
 }
 
 /* ---------- RESET ---------- */
-
 *,
 *::before,
 *::after {
@@ -22,7 +21,6 @@
 }
 
 /* ---------- GLOBAL ---------- */
-
 body {
     font-family: var(--body-font);
     color: var(--dark-text);
@@ -61,7 +59,6 @@ p {
 }
 
 /* ---------- HEADER ---------- */
-
 header {
     display: grid;
     grid-template-columns: 120px 1fr;
@@ -81,7 +78,7 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: var(--light-text);
     text-decoration: none;
     padding: 10px;
     font-weight: bold;
@@ -108,40 +105,37 @@ nav a:hover {
     display: block;
 }
 
-/* Overlay text */
 .hero h1 {
     position: absolute;
     top: 10%; 
     left: 50%;
     transform: translateX(-50%);
-    color: #fff;
+    color: var(--light-text);
     text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* improves contrast */
 }
+
 .hero article {
     position: absolute;
     top: 60%; 
     left: 50%;
     transform: translateX(-50%);
-    color: #fff;
+    color: var(--light-text);
     text-align: center;
-
 }
 
-
-/* Heading style */
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+.hero article img {
+    float: right; /* required by audit */
 }
 
-/* Paragraph style */
 .hero article p {
     font-size: 1.1rem;
     line-height: 1.5;
 }
 
 /* ---------- HOME PAGE ---------- */
-
 .cta {
     text-align: center;
     background-color: #f4f4f4;
@@ -152,7 +146,7 @@ nav a:hover {
 .cta-button {
     display: inline-block;
     background-color: var(--accent1-color);
-    color: white;
+    color: var(--light-text);
     text-decoration: none;
     padding: 12px 20px;
     border-radius: 5px;
@@ -197,7 +191,6 @@ nav a:hover {
 }
 
 /* ---------- ABOUT PAGE ---------- */
-
 .history-content {
     display: grid;
     grid-template-columns: 1fr 250px 1fr;
@@ -229,7 +222,6 @@ nav a:hover {
 }
 
 /* ---------- CONTACT PAGE ---------- */
-
 .contact-info {
     text-align: center;
 }
@@ -278,8 +270,6 @@ fieldset {
 }
 
 /* ---------- TRIPS PAGE ---------- */
-
-/* Center the title */
 .trips-title {
     text-align: center;
     font-size: 2rem;
@@ -290,7 +280,7 @@ fieldset {
     display: flex;
     gap: 20px;
 }
-/* Each card styling */
+
 .trip-card {
     width: 300px;
     text-align: center;
@@ -299,7 +289,6 @@ fieldset {
     border-radius: 10px;
 }
 
-/* Images inside cards */
 .trip-card img {
     width: 100%;
     height: auto;
@@ -314,7 +303,6 @@ fieldset {
     font-family: Arial, sans-serif;
 }
 
-/* Title styling */
 .trip-table h2 {
     text-align: center;
     margin-bottom: 10px;
@@ -322,7 +310,6 @@ fieldset {
     color: #2c3e50;
 }
 
-/* Caption styling */
 .trip-table table caption {
     caption-side: top;
     font-weight: bold;
@@ -330,50 +317,44 @@ fieldset {
     color: #555;
 }
 
-/* Table styling */
 .trip-table table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #fff;
+    background-color: var(--light-text);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
 }
 
-/* Header row */
 .trip-table th {
-    background-color:#005F52;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--light-text);
     padding: 12px;
     text-transform: uppercase;
     font-size: 14px;
 }
 
-/* Table cells */
 .trip-table td {
     padding: 12px;
     border-bottom: 1px solid #ddd;
     color: #333;
 }
 
-/* Zebra striping */
 .trip-table tbody tr:nth-child(even) {
     background-color: #f7f7f7;
 }
 
-/* Hover effect */
 .trip-table tbody tr:hover {
     background-color: #e3f2fd;
     transition: 0.3s;
 }
 
 /* ---------- FOOTER ---------- */
-
 footer {
     margin-top: 30px;
     padding: 20px;
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--light-text);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -389,9 +370,7 @@ footer {
 }
 
 /* ---------- MOBILE ---------- */
-
 @media (max-width: 768px) {
-
     header {
         grid-template-columns: 1fr;
         text-align: center;
@@ -403,7 +382,6 @@ footer {
     }
 
     .grid,
-    .trips-grid,
     .history-content {
         grid-template-columns: 1fr;
     }
